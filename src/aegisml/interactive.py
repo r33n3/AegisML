@@ -87,9 +87,9 @@ def analyze_mcp_server_interactive(log_dir: Path, test_registry: Dict, sandbox_a
     py_files = sorted(servers_dir.glob("*.py"))
 
     # Filter out known system files
-    exclude = {"aegisml_sandbox_cli.py", "aegisml_interactive.py", "aegisml_mcp_server.py",
-               "aegisml_dynamic_tests.py", "aegisml_infrastructure_tests.py",
-               "aegisml_mcp_analyzer.py", "aegisml_skill_analyzer.py"}
+    exclude = {"sandbox_cli.py", "interactive.py", "mcp_server.py",
+               "dynamic_tests.py", "infrastructure_tests.py",
+               "mcp_analyzer.py", "skill_analyzer.py", "__init__.py"}
     py_files = [f for f in py_files if f.name not in exclude]
 
     if not py_files:

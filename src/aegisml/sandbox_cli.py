@@ -30,7 +30,7 @@ from typing import Dict, List, Optional, Iterable, Callable, Any
 
 # Import dynamic tests if available
 try:
-    from aegisml_dynamic_tests import BasicJailbreakTest, BackdoorDetectionTest
+    from aegisml.dynamic_tests import BasicJailbreakTest, BackdoorDetectionTest
     DYNAMIC_TESTS_AVAILABLE = True
 except ImportError:
     DYNAMIC_TESTS_AVAILABLE = False
@@ -39,7 +39,7 @@ except ImportError:
 
 # Import infrastructure tests if available
 try:
-    from aegisml_infrastructure_tests import (
+    from aegisml.infrastructure_tests import (
         MCPStaticAnalysisTest,
         SkillStaticAnalysisTest,
         InfrastructureComprehensiveTest
@@ -1022,7 +1022,7 @@ def main(argv: Optional[List[str]] = None) -> int:
 
         # Check for interactive mode
         if args.interactive:
-            from aegisml_interactive import interactive_menu
+            from aegisml.interactive import interactive_menu
             return interactive_menu(log_dir, TEST_REGISTRY, sandbox_analyze)
 
         # v2.0: Check for analysis targets (model OR infrastructure)
@@ -1034,7 +1034,7 @@ def main(argv: Optional[List[str]] = None) -> int:
 
                 choice = input("Enter interactive mode now? (y/n): ").strip().lower()
                 if choice == 'y':
-                    from aegisml_interactive import interactive_menu
+                    from aegisml.interactive import interactive_menu
                     return interactive_menu(log_dir, TEST_REGISTRY, sandbox_analyze)
                 else:
                     print("[AegisML] Exiting. Use --help for usage information.")

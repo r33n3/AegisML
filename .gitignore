@@ -3,6 +3,8 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+.pytest_cache/
+*.egg-info/
 
 # Virtual environments
 .venv/
@@ -37,3 +39,9 @@ Thumbs.db
 *.swp
 *.swo
 *.tmp
+
+# reference files and notes
+*reference.md
+*summary.md
+*Infrastructure*.md
+*review.md

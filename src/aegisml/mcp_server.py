@@ -33,14 +33,14 @@ except ImportError:
 # ---------- Configuration ----------
 
 DEFAULT_LOG_DIR = "./sandbox_logs"
-DEFAULT_CLI_PATH = "./aegisml_sandbox_cli.py"
+DEFAULT_CLI_PATH = "./sandbox_cli.py"
 
 
 # ---------- Helper Functions ----------
 
 def find_sandbox_cli() -> Optional[Path]:
     """
-    Locate the aegisml_sandbox_cli.py script.
+    Locate the sandbox_cli.py script.
     Checks:
       1. Same directory as this file
       2. Current working directory
@@ -48,18 +48,18 @@ def find_sandbox_cli() -> Optional[Path]:
     """
     # Check same directory
     script_dir = Path(__file__).parent
-    local_cli = script_dir / "aegisml_sandbox_cli.py"
+    local_cli = script_dir / "sandbox_cli.py"
     if local_cli.exists():
         return local_cli
 
     # Check current directory
-    cwd_cli = Path("aegisml_sandbox_cli.py")
+    cwd_cli = Path("sandbox_cli.py")
     if cwd_cli.exists():
         return cwd_cli
 
     # Check if it's executable in PATH (unlikely for .py, but possible)
     import shutil
-    path_cli = shutil.which("aegisml_sandbox_cli.py")
+    path_cli = shutil.which("sandbox_cli.py")
     if path_cli:
         return Path(path_cli)
 
@@ -104,8 +104,8 @@ def invoke_sandbox_cli(
 
     if not cli_script or not cli_script.exists():
         raise FileNotFoundError(
-            f"aegisml_sandbox_cli.py not found. "
-            f"Searched: {cli_script}, ./aegisml_sandbox_cli.py"
+            f"sandbox_cli.py not found. "
+            f"Searched: {cli_script}, ./sandbox_cli.py"
         )
 
     # Validate model exists
@@ -485,7 +485,7 @@ def main():
     # Check if CLI is available
     cli_path = find_sandbox_cli()
     if not cli_path:
-        print("[AegisML MCP] Warning: aegisml_sandbox_cli.py not found", file=sys.stderr)
+        print("[AegisML MCP] Warning: sandbox_cli.py not found", file=sys.stderr)
         print("[AegisML MCP] MCP server will start, but tools may fail", file=sys.stderr)
 
     # Run MCP server

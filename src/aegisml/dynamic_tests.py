@@ -19,7 +19,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, List, Optional, Any, Tuple
 
-from aegisml_sandbox_cli import TestResult, SandboxTest
+from aegisml.sandbox_cli import TestResult, SandboxTest
 
 
 # ---------- Jailbreak Prompt Templates ----------

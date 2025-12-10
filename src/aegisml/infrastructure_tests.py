@@ -16,9 +16,9 @@ import json
 from pathlib import Path
 from typing import Dict, Any
 
-from aegisml_sandbox_cli import TestResult, SandboxTest
-from aegisml_mcp_analyzer import analyze_mcp_server
-from aegisml_skill_analyzer import analyze_skill
+from aegisml.sandbox_cli import TestResult, SandboxTest
+from aegisml.mcp_analyzer import analyze_mcp_server
+from aegisml.skill_analyzer import analyze_skill
 
 
 # ---------- MCP Server Tests ----------
