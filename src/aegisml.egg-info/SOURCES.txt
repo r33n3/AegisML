@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+src/aegisml/__init__.py
+src/aegisml/dynamic_tests.py
+src/aegisml/infrastructure_tests.py
+src/aegisml/interactive.py
+src/aegisml/mcp_analyzer.py
+src/aegisml/mcp_server.py
+src/aegisml/sandbox_cli.py
+src/aegisml/skill_analyzer.py
+src/aegisml.egg-info/PKG-INFO
+src/aegisml.egg-info/SOURCES.txt
+src/aegisml.egg-info/dependency_links.txt
+src/aegisml.egg-info/entry_points.txt
+src/aegisml.egg-info/requires.txt
+src/aegisml.egg-info/top_level.txt
+tests/test_malicious_mcp_server.py

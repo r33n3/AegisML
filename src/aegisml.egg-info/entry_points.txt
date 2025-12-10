@@ -1,0 +1,4 @@
+[console_scripts]
+aegisml-interactive = aegisml.interactive:main
+aegisml-mcp = aegisml.mcp_server:main
+aegisml-sandbox = aegisml.sandbox_cli:main
